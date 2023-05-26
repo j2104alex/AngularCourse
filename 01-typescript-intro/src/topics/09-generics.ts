@@ -4,7 +4,7 @@ export function whatsMyType<T>(argument:T):T {
   return argument;
 }
 
-//Si establezco el tipo de dato en esta sección prima sobre la de la funcion
+//Si establezco el tipo de dato en esta sección prima sobre la de
 let amIString =whatsMyType<string>('Hola mundo');
 let amINumber =whatsMyType<number>(100);
 let amIArray =whatsMyType<number[]>([1,2,3,4,5]);
