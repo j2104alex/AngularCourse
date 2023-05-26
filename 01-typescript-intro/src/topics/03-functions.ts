@@ -15,13 +15,14 @@ function multiply(
 ) {
   return firstNumber * base;
 }
-
-/* const result: number = addNumber(1, 2);
+/* 
+const result: number = addNumber(1, 2);
 const result2: string = addNumbersArrow(1, 2);
 const multiplyResult: number = multiply(5);
- */
+  */
 //Para imprimmir objetos con las llaves
-/* console.log({ result, result2,multiplyResult }); */
+/* console.log({ result, result2,multiplyResult });
+ */
 
 interface Character {
   name:string;
@@ -34,10 +35,15 @@ const healCharacter = (character: Character,amount:number) => {
 }
 
 const stridder:Character ={
-  name:'Strider',
+  name:'Stridder',
   hp:50,
   showHp(){
-    console.log(`Puntos de vida ${this.hp}`)
+    //This hace referencia al objeto
+    console.log(`Puntos de vida ${this.hp}`);
   }
 }
+stridder.showHp();
+healCharacter(stridder,10);
+stridder.showHp();
+
 export {};
