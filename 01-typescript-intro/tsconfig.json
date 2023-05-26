@@ -5,6 +5,8 @@
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
+    //Este es para colocar los decoradores que creamos
+    "experimentalDecorators": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
