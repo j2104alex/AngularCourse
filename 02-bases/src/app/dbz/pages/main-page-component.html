@@ -3,10 +3,16 @@
 
 <div class="row">
   <div class="col">
-    <dbz-list [characterList]="characters"></dbz-list>
+    <!-- Cuando mandamos del padre al hijo [] input
+    Cuando su hijo ejecute el onDelete ejecute el onDeleteCharacter -->
+    <dbz-list
+    [characterList]="characters"
+    (onDelete)="onDeleteCharacter($event)"></dbz-list>
   </div>
 
   <div class="col">
-    <dbz-add-character></dbz-add-character>
+    <!-- Cuando escuchamos eventos con () del hijo al padre outputs-->
+    <!-- $event Angular sabe que el valor que emite onNewCharacterAdded lo recibe de esa manera -->
+    <dbz-add-character (onNewCharacterAdded)="onNewCharacter($event)"></dbz-add-character>
   </div>
 </div>

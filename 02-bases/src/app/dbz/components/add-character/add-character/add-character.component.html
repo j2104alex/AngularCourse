@@ -1,7 +1,29 @@
-<form class="row">
+<form class="row" (ngSubmit)="emitCharacter()">
+  <!-- [(Evento)[Atributo][(Evento y atributo)] -->
   <h4>Agregar personaje</h4>
-  <input type="text" class="form-control mb-2" placeholder="Nombre" />
-  <input type="number" class="form-control mb-2" placeholder="Poder" />
+  <input
+  type="text"
+  name="name"
+  class="form-control mb-2"
+  placeholder="Nombre"
+  [(ngModel)]="characterAdded.name"
+  />
 
-  <button type="submit" class="btn btn-primary">Agregar</button>
+  <input
+  type="number"
+  name="power"
+  class="form-control mb-2"
+  placeholder="Poder"
+  [(ngModel)]="characterAdded.power"
+  />
+
+  <button
+  type="submit"
+  class="btn btn-primary"
+  >
+  Agregar
+</button>
+
+  <!-- Pipe: Los pipes son una herramienta de Angular que nos permite transformar visualmente la información -->
+  <!-- <pre>{{characterAdded | json}}</pre> -->
 </form>

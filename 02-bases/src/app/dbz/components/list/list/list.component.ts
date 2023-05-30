@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Character } from '../../../interfaces/character.interface';
 
 @Component({
@@ -12,8 +12,19 @@ export class ListComponent {
   //Dice que ListComponent puede recibir una property characterList
 
   @Input()
-  public characterList:Character[]=[{
-    name:'Trunks',
-    power:10,
-  }]
+  public characterList:Character[]=[];
+
+  //@ Output
+  //Dice que se emite el  evento onDelete y la logica esta en main.ts que recibe un numero (index) como
+  //parametro
+
+  @Output()
+  public onDelete: EventEmitter<number> = new EventEmitter();
+  //variable que instancia la clase de EventEmmiter
+
+
+  public onDeleteCharacter(index:number):void{
+    //Emitir el ID del personaje
+    this.onDelete.emit(index)
+  }
 }
