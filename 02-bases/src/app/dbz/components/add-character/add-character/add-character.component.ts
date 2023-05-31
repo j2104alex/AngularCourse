@@ -8,7 +8,7 @@ import { Character } from 'src/app/dbz/interfaces/character.interface';
   styleUrls: ['./add-character.component.css'],
 })
 export class AddCharacterComponent {
-  /* Crear instancia de emision de ventos ya que debemos pasar la data
+  /* Crear instancia de emision de eventos ya que debemos pasar la data
   de este componente al componente de listar */
   @Output()
   public onNewCharacterAdded: EventEmitter<Character> = new EventEmitter();

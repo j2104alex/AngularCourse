@@ -25,6 +25,6 @@ export class ListComponent {
 
   public onDeleteCharacter(index:number):void{
     //Emitir el ID del personaje
-    this.onDelete.emit(index)
+    this.onDelete.emit(index);
   }
 }
