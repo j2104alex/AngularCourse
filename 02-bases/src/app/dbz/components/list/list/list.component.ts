@@ -12,19 +12,21 @@ export class ListComponent {
   //Dice que ListComponent puede recibir una property characterList
 
   @Input()
-  public characterList:Character[]=[];
+  public characterList: Character[] = [];
 
   //@ Output
   //Dice que se emite el  evento onDelete y la logica esta en main.ts que recibe un numero (index) como
   //parametro
 
   @Output()
-  public onDelete: EventEmitter<number> = new EventEmitter();
+  public onDelete: EventEmitter<string> = new EventEmitter();
   //variable que instancia la clase de EventEmmiter
 
 
-  public onDeleteCharacter(index:number):void{
+  public onDeleteCharacter(id?: string): void {
+    if (!id) return;
+    console.log(id);
     //Emitir el ID del personaje
-    this.onDelete.emit(index);
+    this.onDelete.emit(id);
   }
 }

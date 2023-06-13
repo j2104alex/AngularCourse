@@ -5,9 +5,8 @@
   <div class="col">
     <!-- Cuando mandamos del padre al hijo [] input
     Cuando su hijo ejecute el onDelete ejecute el onDeleteCharacter -->
-    <dbz-list
-    [characterList]="characters"
-    (onDelete)="onDeleteCharacter($event)"></dbz-list>
+    <dbz-list [characterList]="characters"
+              (onDelete)="onDeleteCharacter($event)"></dbz-list>
   </div>
 
   <div class="col">
